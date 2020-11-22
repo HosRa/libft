@@ -2,5 +2,6 @@
 
 void ft_lstadd_front(t_list **alst, t_list *new)
 {
-    alst[0] = new;
+    new->next = *alst;
+    *alst = new;
 }
