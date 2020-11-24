@@ -6,7 +6,7 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/24 13:49:09 by thallard          #+#    #+#             */
-/*   Updated: 2020/11/24 14:05:09 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/11/24 15:17:44 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char			*ft_strchr(const char *string, int c);
 char			*ft_strrchr(const char *string, int c);
 char			*ft_strnstr(char *str, char *to_find, int len);
 int				ft_strncmp(char *s1, char *s2, unsigned int n);
-char			*ft_strtrim(char const *s1, char const *set);
+char			*ft_strtrim(char const *str, char const *set);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_strdup(char *src);
 

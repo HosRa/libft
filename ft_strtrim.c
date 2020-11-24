@@ -6,26 +6,28 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:38:17 by thallard          #+#    #+#             */
-/*   Updated: 2020/11/24 13:46:52 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/11/24 15:49:50 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *str, char const *set)
 {
-	size_t		size_s;
-	char		*newstring;
+	int			size;
+	char		*res;
 
-	if (!s1 || !set)
+	if (!str || !set)
 		return (NULL);
-	while (*s1 && ft_strchr(set, *s1))
-		s1++;
-	size_s = ft_strlen(s1);
-	while (size_s && ft_strchr(set, s1[size_s]))
-		size_s--;
-	newstring = ft_substr((char*)s1, 0, size_s + 1);
-	if (newstring[0] == '\0')
+	while (*str && ft_strchr(set, *str))
+		str++;
+	size = ft_strlen(str);
+	while (size && ft_strchr(set, str[size]))
+		size--;
+	res = ft_substr((char *)str, 0, size + 1);
+	if (!res)
+		return (NULL);
+	if (res[0] == '\0')
 		return (ft_strdup(""));
-	return (newstring);
+	return (res);
 }

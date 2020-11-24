@@ -6,13 +6,13 @@
 /*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/23 16:41:33 by thallard          #+#    #+#             */
-/*   Updated: 2020/11/24 12:23:12 by thallard         ###   ########lyon.fr   */
+/*   Updated: 2020/11/24 16:05:05 by thallard         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_get_words(char *str, char c)
+static int		ft_get_words(char *str, char c)
 {
 	int		i;
 	int		nb;
@@ -31,7 +31,7 @@ int			ft_get_words(char *str, char c)
 	return (nb);
 }
 
-char		*ft_create_word(char *str, char c)
+static char		*ft_create_word(char *str, char c)
 {
 	int		i;
 	char	*word;
@@ -51,13 +51,15 @@ char		*ft_create_word(char *str, char c)
 	return (word);
 }
 
-char		**ft_split(char *str, char c)
+char			**ft_split(char *str, char c)
 {
 	int		i;
 	char	**res;
 	int		j;
 
-	if (!(res = malloc(sizeof(char *) * (ft_get_words(str, c) + 1))) || !str)
+	if (!str)
+		return (NULL);
+	if (!(res = malloc(sizeof(char *) * (ft_get_words(str, c) + 1))))
 		return (NULL);
 	i = 0;
 	j = 0;
