@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: thallard <thallard@student.42lyon.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/23 15:35:52 by thallard          #+#    #+#             */
+/*   Updated: 2020/11/23 15:35:53 by thallard         ###   ########lyon.fr   */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int   ft_memcmp(const void *dest, const void *source, size_t len)
+int		ft_memcmp(const void *dest, const void *source, size_t len)
 {
 	unsigned char	*dst;
 	unsigned char	*src;
