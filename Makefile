@@ -21,7 +21,6 @@ OBJ_BONUS=$(SRC_BONUS:.c=.o)
 $(NAME): libft.h
 	$(CC) $(CFLAGS) -c $(SRC)
 	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
 
 $(OBJ): libft.h
 
@@ -32,7 +31,6 @@ all: $(NAME)
 bonus:
 	$(CC) $(CFLAGS) -c $(SRC_BONUS)
 		ar rc $(NAME) $(OBJ_BONUS)
-		ranlib $(NAME)
 
 clean:
 	$(RM) $(OBJ) $(OBJ_BONUS)
